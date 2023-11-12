@@ -1,0 +1,26 @@
+/* Ustawienie tła całej strony na jasnoniebieski */
+body {
+	background-color: #00FFFF;
+}
+
+/* Stylizacja pola szerokości (widthInput) */
+#widthInput {
+	width: 125px; /* Szerokość pola */
+	height: 20px; /* Wysokość pola */
+	background-color: #A9A9A9; /* Tło pola w kolorze ciemnoszarym */
+	border-radius: 25px; /* Zaokrąglenie rogów pola */
+}
+
+/* Stylizacja pola wysokości (heightInput) */
+#heightInput {
+	width: 125px; /* Szerokość pola */
+	height: 20px; /* Wysokość pola */
+	background-color: #A9A9A9; /* Tło pola w kolorze ciemnoszarym */
+	border-radius: 25px; /* Zaokrąglenie rogów pola */
+}
+
+/* Stylizacja przycisku "Utwórz" (buttonClick) */
+#buttonClick {
+	background-color: red; /* Tło przycisku w kolorze czerwonym */
+	border-radius: 30px; /* Zaokrąglenie rogów przycisku, nadanie kształtu okręgu */
+}

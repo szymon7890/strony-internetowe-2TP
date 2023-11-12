@@ -1,0 +1,20 @@
+body {
+	margin: 0; /* Ustawienie marginesu dla całego body na 0, usuwa domyślne marginesy */
+	background-color: #696969; /* Ustawienie tła strony na kolor szary (kod koloru #696969) */
+}
+
+#yes {
+	border-radius: 30px; /* Zaokrąglenie rogów elementu o identyfikatorze "yes" */
+	display: flex; /* Ustawi element na tryb flexbox, co może wpłynąć na rozmieszczenie elementów potomnych */
+	margin-left: auto; /* Ustawienie marginesu lewego na "auto", element jest wycentrowany poziomo */
+	margin-right: auto; /* Ustawienie marginesu prawego na "auto", element jest wycentrowany poziomo */
+	margin-top: 20px; /* Dodaje odstęp na górze elementu o identyfikatorze "yes" */
+}
+
+#submit {
+	margin-top: 20px; /* Dodaje odstęp na górze elementu o identyfikatorze "submit" */
+	border-radius: 30px; /* Zaokrąglenie rogów elementu o identyfikatorze "submit" */
+	display: flex; /* Ustawi element na tryb flexbox, co może wpłynąć na rozmieszczenie elementów potomnych */
+	margin-left: auto; /* Ustawienie marginesu lewego na "auto", element jest wycentrowany poziomo */
+    margin-right: auto; /* Ustawienie marginesu prawego na "auto", element jest wycentrowany poziomo */
+}

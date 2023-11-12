@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<style>
+			body {
+				text-align: center;
+			}
+		</style>
+		<div>generowanie piramidy</div>
+		<input type="text" placeholder="Podaj wartość liczbową" id="piramidCount"></input>
+		<input type="submit" value="wyslij" id="btn"></input>
+		<script>
+			// Nasłuchuje kliknięcia na przycisku "wyslij"
+			document.querySelector('#btn').addEventListener('click', function() {
+				// Tworzy pustą tablicę do przechowywania liczb nieparzystych
+				var oddNumbers = [];
+
+				// Wypełnia tablicę liczbami nieparzystymi do wartości podanej w polu tekstowym o identyfikatorze "piramidCount"
+				for (var i = 0; i < document.querySelector('#piramidCount').value; i++) {
+					if (i % 2 == 1) {
+						oddNumbers.push(i);
+					}
+				}
+
+				var row = 1; // Inicjalizuje zmienną row na 1, reprezentującą bieżący wiersz
+				var counter = 0; // Inicjalizuje zmienną counter na 0, reprezentującą bieżący indeks w tablicy oddNumbers
+
+				for (var j = 0; j < oddNumbers.length; j++) {
+					var text = ''; // Inicjalizuje zmienną text, w której zbudowany zostanie tekst wiersza
+
+					for (var k = 0; k < row; k++) {
+						if (oddNumbers[counter] == undefined) {
+							break;
+						}
+						text += '		' + oddNumbers[counter]; // Dodaje liczbę nieparzystą do tekstu wiersza
+						counter += 1; // Inkrementuje zmienną counter
+
+					}
+
+					if (j < row) {
+						row += 1; // Inkrementuje zmienną row, jeśli j jest mniejsze niż bieżący wiersz
+					}
+
+					if (text != '') {
+						// Tworzy nowy element <p> i wypełnia go tekstem
+						var elem = document.createElement("p");
+						var textNode = document.createTextNode(text);
+						elem.appendChild(textNode);
+						document.body.appendChild(elem); // Dodaje element <p> do ciała dokumentu
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+.circle {
+	/* Zasady stylizacji dla elementów o klasie "circle". */
+	width: 75px; /* Ustala szerokość na 75 pikseli. */
+	height: 75px; /* Ustala wysokość na 75 pikseli. */
+	color: black; /* Ustala kolor tekstu na czarny. */
+	background-color: black; /* Ustala kolor tła na czarny. */
+	border-radius: 50px; /* Ustala promień zaokrąglenia na 50 pikseli, co tworzy okrągły kształt. */
+	position: relative; /* Ustala pozycję na "relative", co pozwala na kontrolę pozycji elementu względem innych elementów. */
+	animation: circle 5s infinite; /* Dodaje animację o nazwie "circle" trwającą 5 sekund i powtarzaną w nieskończoność. */
+	animation-timing-function: linear; /* Ustala funkcję czasu animacji na liniową (stała prędkość). */
+}
+
+@keyframes circle {
+	/* Deklaracja animacji o nazwie "circle". */
+	/* Określenie zmian w kolejnych krokach animacji. */
+
+	0% {
+		left: 0;
+		top: 0;
+	}
+	/* W kroku 0%, ustawia pozycję na (0, 0). */
+
+	5% {
+		top: 50px;
+		left: 50px;
+	}
+	/* W kroku 5%, przesuwa element w dół i w prawo. */
+
+	/* (Kolejne kroki animacji określają różne pozycje elementu na stronie.) */
+	10% {
+		top: 150px;
+		left: 200px;
+	}
+	15% {
+		top: 250px;
+		left: 300px;
+	}
+	20% {
+		top: 400px;
+		left: 400px;
+	}
+	25% {
+		top: 300px;
+		left: 450px;
+	}
+	30% {
+		top: 200px;
+		left: 550px;
+	}
+	35% {
+		top: 100px;
+		left: 650px;
+	}
+	40% {
+		top: 200px;
+		left: 750px;
+	}
+	45% {
+		top: 300px;
+		left: 800px;
+	}
+	50% {
+		top: 350px;
+		left: 850px;
+	}
+	55% {
+		top: 400px;
+		left: 900px;
+	}
+	60% {
+		top: 300px;
+		left: 950px;
+	}
+	65% {
+		top: 250px ;
+		left: 1000px;
+	}
+	70% {
+		top: 150px;
+		left: 1050px;
+	}
+	75% {
+		top: 250px;
+		left: 1100px;
+	}
+	80% {
+		top: 350px;
+		left: 1200px;
+	}
+	85% {
+		top: 400px;
+		left: 1350px;
+	}
+	90% {
+		top: 350px;
+		left: 1450px;
+	}
+}
+
+#footer {
+	/* Zasady stylizacji dla elementu o identyfikatorze "footer". */
+	position: fixed; /* Ustala pozycję na "fixed", co trzyma element w stałym miejscu na stronie, nawet przy przewijaniu. */
+	height: 250px; /* Ustala wysokość na 250 pikseli. */
+	background-color: green; /* Ustala kolor tła na zielony. */
+	bottom: 0px; /* Ustala pozycję na dole strony (0 pikseli od dołu). */
+	left: 0px; /* Ustala pozycję na lewym skraju strony (0 pikseli od lewej). */
+	right: 0px; /* Ustala pozycję na prawym skraju strony (0 pikseli od prawej). */
+	margin-bottom: 0px; /* Ustala margines dolny na 0 pikseli. */
+}

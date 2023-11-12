@@ -1,0 +1,79 @@
+/* Resetowanie marginesów dla wszystkich elementów na stronie */
+* {
+    margin: 0px;
+}
+
+/* Resetowanie marginesu dla ciała strony */
+body {
+    margin: 0px;
+}
+
+/* Kontener strony - korzysta z układu siatkowego Grid */
+#container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "footer footer footer"
+    ;
+    grid-template-rows: 1fr 5fr auto;
+    grid-template-columns: 1fr 7fr 1fr;
+    height: 100vh; /* Wysokość kontenera na całą wysokość widoku (viewport) */
+}
+
+/* Nagłówek strony */
+#container header {
+    background-color: #875924; /* Tło nagłówka */
+    grid-area: header; /* Obszar nagłówka w układzie Grid */
+}
+
+/* Kontener dla linków w nagłówku - używa flexbox do wyśrodkowania zawartości */
+#header-link {
+    display: flex;
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
+}
+
+#welcome {
+   text-align: center; /* Wyrównaj h1 na środku */
+   margin-right: auto; /* Wyrównanie marginesu z prawej strony */
+   margin-left: auto; /* Wyrównanie marginesu z lewej strony */
+   padding-right: 20%; /* Prawy wewnętrzny margines 20% */
+   margin-top: 3%; /* Górny margines 3% */
+}
+
+/* Styl dla linków w nagłówku */
+.link {
+    text-decoration: none; /* Usunięcie podkreślenia odnośników */
+    color: white; /* Kolor tekstu na biało */
+    margin-left: 3%; /* Lewy margines 3% */
+    margin-right: 1%; /* Prawy margines 1% */
+    margin-top: 3%; /* Górny margines 3% */
+    font-size: 24px; /* Rozmiar czcionki 24 piksele */
+}
+
+/* Nawigacja strony */
+#container nav {
+    background-color: #686868; /* Tło nawigacji */
+    grid-area: nav; /* Obszar nawigacji w układzie Grid */
+}
+
+/* Wiadomość informacyjna w nawigacji */
+#message {
+    padding: 10%; /* Wewnętrzny margines 10% */
+    font-size: 20px; /* Rozmiar czcionki 20 pikseli */
+    font-weight: bold; /* Pogrubienie tekstu */
+    text-align: center; /* Wyrównanie tekstu na środku */
+}
+
+/* Stopka strony */
+#container footer {
+    background-color: #875924; /* Tło stopki */
+    grid-area: footer; /* Obszar stopki w układzie Grid */
+}
+
+/* Styl dla informacji o autorze */
+#author {
+    text-align: center; /* Wyrównanie tekstu na środku */
+    font-size: 24px; /* Rozmiar czcionki 24 piksele */
+    color: black; /* Kolor tekstu na czarno */
+}

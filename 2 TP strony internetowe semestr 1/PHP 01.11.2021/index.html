@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<!-- Początek deklaracji dokumentu HTML -->
+		<meta charset="UTF-8">
+		<!-- Ustalenie kodowania znaków na UTF-8 -->
+		<title>Samochody</title>
+		<!-- Tytuł strony wyświetlany na pasku przeglądarki -->
+	</head>
+	<body>
+		<!-- Rozpoczęcie ciała strony -->
+
+		<form action="cars.php" method="POST">
+		<!-- Rozpoczęcie formularza, który wysyła dane do pliku "cars.php" metodą POST -->
+			<label>Marka samochodu: </label>
+			<!-- Etykieta dla pola wprowadzania marki samochodu -->
+			<input type="text" name="marka_samochodu">
+			<!-- Pole tekstowe do wprowadzenia marki samochodu, dane zostaną przekazane jako "marka_samochodu" -->
+			<br>
+			<!-- Element HTML do tworzenia odstępu -->
+			<label>Model samochodu: </label>
+			<!-- Etykieta dla pola wprowadzania modelu samochodu -->
+			<input type="text" name="model_samochodu">
+			<!-- Pole tekstowe do wprowadzenia modelu samochodu, dane zostaną przekazane jako "model_samochodu" -->
+			<br>
+			<!-- Element HTML do tworzenia odstępu -->
+			<label>Rocznik: </label>
+			<!-- Etykieta dla pola wprowadzania rocznika samochodu -->
+			<input type="date" name="rocznik">
+			<!-- Pole daty do wprowadzenia rocznika samochodu, dane zostaną przekazane jako "rocznik" -->
+			<br>
+			<!-- Element HTML do tworzenia odstępu -->
+			<label>Nowy </label>
+			<!-- Etykieta dla wyboru rodzaju (nowy lub używany) -->
+			<input type="radio" name="rodzaj" value="sprawny">
+			<!-- Przycisk radio dla opcji "sprawny", dane zostaną przekazane jako "rodzaj" z wartością "sprawny" -->
+			Używany<input type="radio" name="rodzaj" value="uszkodzony">
+			<!-- Przycisk radio dla opcji "uszkodzony", dane zostaną przekazane jako "rodzaj" z wartością "uszkodzony" -->
+			<br>
+			<!-- Element HTML do tworzenia odstępu -->
+			<input type="submit" value="wyślij">
+			<!-- Przycisk "Wyślij", który pozwala na wysłanie formularza -->
+		</form>
+		<!-- Zakończenie formularza -->
+
+	</body>
+	<!-- Zakończenie ciała strony -->
+</html>
+<!-- Zakończenie deklaracji dokumentu HTML -->

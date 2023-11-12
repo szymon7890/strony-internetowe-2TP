@@ -1,0 +1,274 @@
+CREATE DATABASE biblioteka;
+
+ 
+
+CREATE TABLE klienci (
+    id_klienta INT AUTO_INCREMENT NOT NULL,
+    imie VARCHAR(25),
+    nazwisko VARCHAR(25),
+    plec INT,
+    pesel VARCHAR(11),
+    telefon VARCHAR(30),
+    PRIMARY KEY (id_klienta)
+);
+
+ 
+
+CREATE TABLE ksiazki (
+    id_ksiazki INT AUTO_INCREMENT NOT NULL,
+    tytul VARCHAR(50),
+    autor VARCHAR(50),
+    cena DECIMAL(10,2),
+    PRIMARY KEY (id_ksiazki)
+);
+
+ 
+
+
+CREATE TABLE zamowienia (
+    id_zamowienia INT AUTO_INCREMENT NOT NULL,
+    id_ksiazki INT NOT NULL,
+    id_klienta INT NOT NULL,
+    data DATE,
+    ilosc int,
+    PRIMARY KEY (id_zamowienia)
+);
+
+ 
+
+W tabeli klienci
+
+ 
+
+INSERT INTO klienci(id_klienta, imie, nazwisko, plec, pesel, telefon)
+VALUES (NULL, 'kamil', 'kowalski', 'Male', '00000000001', '482255010');
+
+ 
+
+INSERT INTO klienci (id_klienta, imie, nazwisko, plec, pesel, telefon)
+VALUES (NULL, 'Kacper', 'Michalski', 'Male', '00000000002', '555783968');
+
+ 
+
+INSERT INTO klienci (id_klienta, imie, nazwisko, plec, pesel, telefon)
+VALUES (NULL, 'Agata', 'Michalska', 'Female', '00000000003', '802324376 ');
+
+ 
+
+INSERT INTO klienci (id_klienta, imie, nazwisko, plec, pesel, telefon)
+VALUES (NULL, 'Nikola', 'Jankowska', 'Female', '00000000004', '9729729923');
+
+ 
+
+INSERT INTO klienci (id_klienta, imie, nazwisko, plec, pesel, telefon)
+VALUES (NULL, 'Wojtek', 'Jankowski', 'Female', '00000000005', '9729409923');
+
+ 
+
+W tabeli książki
+
+ 
+
+INSERT INTO ksiazki (id_ksiazki, tytul, autor, cena)
+VALUES (NULL, 'Rusz glowa SQL', 'Lynn Beighley', '99,0');
+
+ 
+
+INSERT INTO ksiazki (id_ksiazki, tytul, autor, cena)
+VALUES (NULL, 'Język C++. Szkoła programowania. Wydanie VI', 'Stephen Prata', '99');
+
+ 
+
+INSERT INTO ksiazki (id_ksiazki, tytul, autor, cena)
+VALUES (NULL, 'Czysty kod. Podręcznik dobrego programisty', 'Robert C. Martin', '69');
+
+ 
+
+INSERT INTO ksiazki (id_ksiazki, tytul, autor, cena)
+VALUES (NULL, 'Czysta architektura. Struktura i design oprogramowania. Przewodnik dla profesjonalistów', 'Robert C. Martin', '67');
+
+ 
+
+INSERT INTO ksiazki (id_ksiazki, tytul, autor, cena)
+VALUES (NULL, 'HTML i CSS. Zaprojektuj i zbuduj witrynę WWW. Podręcznik Front-End Developera', 'Jon Duckett', '89');
+
+ 
+
+W tabeli zamowienia
+
+ 
+
+INSERT INTO zamowienia (id_zamowienia, id_ksiazki, id_klienta, data, ilosc)
+VALUES (null, 1, 1, '2021-01-03', '2');
+
+ 
+
+INSERT INTO zamowienia (id_zamowienia, id_ksiazki, id_klienta, data, ilosc)
+VALUES (null, 2, 2, '2021-03-04', '1');
+
+ 
+
+INSERT INTO zamowienia (id_zamowienia, id_ksiazki, id_klienta, data, ilosc)
+VALUES (null, 3, 3, '2021-05-06', '5');
+
+ 
+
+INSERT INTO zamowienia (id_zamowienia, id_ksiazki, id_klienta, data, ilosc)
+VALUES (null, 4, 4, '2021-06-10', '3'
+
+ 
+
+INSERT INTO zamowienia (id_zamowienia, id_ksiazki, id_klienta, data, ilosc)
+VALUES (null, 5, 5, '2021-07-18', '4');
+
+ 
+
+Utwórz następujące kwerendy:
+
+ 
+
+
+    Wypisująca wszystkie rekordy z tabeli klienci
+
+ 
+
+    SELECT * FROM `klienci`
+
+ 
+
+    
+    Wypisująca tytuł i cena z tabeli ksiazki
+
+ 
+
+    SELECT tytul, cena FROM ksiazki
+
+ 
+
+
+    Wypisująca na podstawie tabeli Zamowienia: imie i nazwisko klienta
+    w jednym polu, tytul zamowionej ksiazki, ilosc, cene (ilosc * cena ksiazki),
+    date zamowienia
+	konkat
+
+    ON - warunek
+
+/*Select wyświetla */
+SELECT
+/*konkatenacja łączy imie i spacje i nazwisko*/
+	CONCAT(`imie`, ' ', `nazwisko`),
+/*z tabeli ksiazki biorę tytuł*/
+    ksiazki.tytul,
+/*z tabeli zamowienia biorę ilosc */
+    zamowienia.ilosc,
+/*z tabeli zamowienia i ksiazki biorę ilosc i cene i monże za pomocą * */
+    zamowienia.ilosc * ksiazki.cena,
+/*z tabeli zamowienia biorę datę*/
+    zamowienia.data
+/*from z tabeli zamowienia*/
+FROM 
+    zamowienia
+/*join łącze z tebeli klienci po czym łączymy warunek klienci z id_klienta = zamowienia wyciągam z id_klienta*/
+JOIN
+	klienci ON klienci.id_klienta = zamowienia.id_klienta
+/*join dołączam tabele ksiazki do tabeli amowienia po kolumnie id_ksiazki*/
+JOIN
+	ksiazki ON ksiazki.id_ksiazki = zamowienia.id_ksiazki
+
+
+	
+
+	Dla każdego klienta liczbę zamówionych książek
+
+	/*Select Wyświetla*/
+SELECT
+/*wyświetli nam klienta z imieniem*/
+	klienci.imie,
+/*wyświetli nam klienta z nazwiskiem*/
+    klienci.nazwisko,
+/*wyświetli nam zamowienia z ilosc*/
+    zamowienia.ilosc
+/*From z*/
+FROM
+	klienci
+/*Join połączy tabele zamowienia z tabelą klienci*/
+JOIN
+	zamowienia ON zamowienia.id_klienta = klienci.id_klienta
+/*Join połączy  tabele ksiazki z tabelą zamowienia*/
+JOIN
+	ksiazki ON ksiazki.id_ksiazki = zamowienia.id_ksiazki
+	
+	
+	
+
+	Dla każdego klienta wydaną sumę w minionym miesiącu
+
+/*Select wyświetl*/
+SELECT
+/*Wyświetli nam klienta z imieniem*/
+	klienci.imie,
+/*Wyświetli nam klienta z nazwisko*/
+    klienci.nazwisko,
+/*Wyświetli nam ilość i książek z ceną*/
+    zamowienia.ilosc * ksiazki.cena,
+/*Wyświetli nam zamówienia i datę*/
+    zamowienia.data
+FROM
+	klienci
+/*Połączy nam zamówienia z kleici i id_klienta z zamówieniami id_klienta*/
+JOIN
+	zamowienia ON klienci.id_klienta = zamowienia.id_klienta
+/*Połączy nam książki z książkami i id_książki z zamówieniami id_książki*/
+JOIN
+	ksiazki ON ksiazki.id_ksiazki = zamowienia.id_ksiazki
+/*Where Gdzie */
+WHERE
+/*zamówienia z datą jak rok "2021-08%" gdzie jest poniżej 1 miesiąca*/
+	zamowienia.data LIKE "2021-08%";
+
+	
+	
+
+	Dla każdej książki liczbę sprzedanych egzemplarzy
+
+	
+/*Select wyświetl*/
+SELECT
+/*wyświetli nam z tabeli tytuł*/
+	ksiazki.tytul,
+/*wyświetli nam z tabeli ilość*/
+    zamowienia.ilosc
+FROM
+	zamowienia
+/*Połączenie książki z zamówieniami z id_książki i połączenie książki z id_książki*/
+JOIN
+	ksiazki ON zamowienia.id_ksiazki = ksiazki.id_ksiazki;
+
+
+
+	Licząca średnią wysokość zamówienia dla wszystkich zamówień
+
+/*Select wyświetl*/
+SELECT
+/*Wyświetla nam średnią cenę po wpisaniu w środku*/
+	AVG(cena)
+/*z tabeli książki*/
+	FROM
+ksiazki;
+
+
+	Dla każdego miesiąca smę przychodów	
+
+	/*Select wyświetl*/
+SELECT
+/*rok zamówienia połączone z ilością następnie miesiąc i książki połączone z ceną następnie sumujemy z książki cena*/
+	year(zamowienia.ilosc),month(ksiazki.cena),sum(ksiazki.cena),
+/*książki połączone z ceną mnożone z zamówieniami ilością*/
+	ksiazki.cena * zamowienia.ilosc,
+/*zamówienia data*/
+    zamowienia.data
+FROM
+	zamowienia
+/*połączono książki z zamóweiniami z id_książki następnie połączono książki z id_książki*/
+JOIN
+	ksiazki on zamowienia.id_ksiazki = ksiazki.id_ksiazki

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript</title>
+	</head>
+	<body>
+		<script src="script.js"></script>
+		
+		<h2>My First JavaScript</h2>
+		
+		<!-- Wyświetla słowo w konsoli przeglądarki: console.log("Hello"); -->
+		<script>
+			// Deklaracja dwóch zmiennych a i b
+			let a, b;
+			a = 1;
+			b = 5;
+
+			// Funkcja myFunction, która zmienia zawartość elementu o id "demo"
+			function myFunction() {
+				document.getElementById("demo").innerHTML = "Welcome!";
+			}
+
+			// Funkcja YouGotMail, która wyświetla okno alertu z wiadomością
+			function YouGotMail() {
+				window.alert("Hello\nHow are you?");
+			}
+
+			// Wyświetla wynik odejmowania b - a w konsoli przeglądarki
+			console.log("The console contains a secret: " + (b - a));
+		</script>
+
+		<p id="demo">I'm the empty space</p>
+		<button type="button" onclick="myFunction()">Welcome button</button>
+		<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
+		<button type="button" onclick="YouGotMail()">YouGotMail</button>
+		<button onclick="window.print()">Print this page</button>
+	</body>
+</html>

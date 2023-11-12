@@ -1,0 +1,125 @@
+/* Resetowanie marginesów dla wszystkich elementów */
+* {
+    margin: 0px;
+}
+
+/* Resetowanie marginesu dla elementu body */
+body {
+    margin: 0px;
+}
+
+/* Ustawienie głównego kontenera jako siatka */
+#container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "footer footer footer"
+    ;
+    grid-template-rows: 1fr 5fr auto; /* Ustawienie trzech wierszy w siatce */
+    grid-template-columns: 1fr 7fr 1fr; /* Ustawienie trzech kolumn w siatce */
+    height: 100vh; /* Wysokość kontenera na całą dostępną wysokość widoku (viewport) */
+}
+
+/* Stylizacja nagłówka w kontenerze */
+#container header {
+    background-color: #875924; /* Tło nagłówka w kolorze #875924 */
+    grid-area: header; /* Przypisanie do obszaru "header" w siatce */
+}
+
+/* Stylizacja elementów w nagłówku */
+#header-link {
+    display: flex; /* Wykorzystanie flexbox do rozmieszczenia elementów w nagłówku */
+    align-items: center; /* Wyrównanie elementów wertykalnie */
+}
+
+#welcome {
+   text-align: center; /* Wyrównaj h1 na środku */
+   margin-right: auto; /* Wyrównanie marginesu z prawej strony */
+   margin-left: auto; /* Wyrównanie marginesu z lewej strony */
+   padding-right: 20%; /* Dodaje wewnętrzny margines z prawej strony o szerokości 20% szerokości elementu */
+   margin-top: 3%; /* Dodaje margines z góry o wysokości 3% wysokości elementu */
+}
+
+/* Stylizacja linków w nagłówku */
+.link {
+    text-decoration: none; /* Usunięcie podkreślenia spod linków */
+    color: white; /* Kolor tekstu na biały */
+    margin-left: 3%; /* Lewy margines między linkami */
+    margin-right: 1%; /* Prawy margines między linkami */
+    margin-top: 3%; /* Górny margines między linkami */
+    font-size: 24px; /* Rozmiar tekstu */
+}
+
+/* Stylizacja obszaru nawigacji */
+#container nav {
+    background-color: #875924; /* Tło nawigacji w kolorze #875924 */
+    grid-area: nav; /* Przypisanie do obszaru "nav" w siatce */
+}
+
+/* Stylizacja obrazka powitalnego */
+#welcomeImg {
+    width: 100%; /* Szerokość na 100% kontenera */
+    height: 18%; /* Wysokość */
+}
+
+/* Stylizacja nagłówka wtórnego */
+#welcomeSecondary {
+    text-align: center; /* Wyrównanie tekstu na środku */
+    font-size: 36px; /* Rozmiar tekstu */
+}
+
+/* Utworzenie kontenera siatki dla elementów z obrazkami i opisami */
+.grid-container {
+    display: grid; /* Ustawienie jako siatka */
+    grid-template-columns: auto auto; /* Dwie kolumny automatycznej szerokości */
+}
+
+/* Stylizacja pojedynczego elementu w siatce */
+.grid-item {
+    background-color: rgba(0, 0, 0, 0.789); /* Tło z koloru rgba */
+    border: 1px solid black; /* Obramowanie z czarnego koloru */
+    text-align: center; /* Wyrównanie tekstu na środku */
+}
+
+/* Stylizacja tekstu informacyjnego */
+.informationAnimals {
+    font-size: 24px; /* Rozmiar tekstu */
+    text-align: center; /* Wyrównanie tekstu na środku */
+    color: white; /* Kolor tekstu na biały */
+    padding: 5%; /* Wewnętrzny margines dla tekstu */
+}
+
+/* Stylizacja obrazków */
+.grid {
+    width: 40%; /* Szerokość na 40% kontenera */
+    height: 40%; /* Wysokość na 40% kontenera */
+    padding-top: 10%; /* Wewnętrzny margines górny */
+}
+
+.item {
+    text-align: center; /* Wyrównuje tekst na środku dla elementów o klasie .item */
+}
+
+.iamgesAnimals {
+    max-width: 70%; /* Ogranicza maksymalną szerokość elementów o klasie .iamgesAnimals do 70% szerokości ich kontenera */
+    height: auto; /* Automatycznie dostosowuje wysokość elementów o klasie .iamgesAnimals, zachowując proporcje */
+}
+
+/* Stylizacja tekstu informacyjnego */
+.informationAnimals {
+    margin: 10px 0; /* Margines górny i dolny 10px, bez marginesu poziomego */
+}
+
+/* Stylizacja stopki */
+#container footer {
+    background-color: #875924; /* Tło stopki w kolorze #875924 */
+    grid-area: footer; /* Przypisanie do obszaru "footer" w siatce */
+}
+
+/* Stylizacja informacji o autorze */
+#author {
+    text-align: center; /* Wyrównanie tekstu na środku */
+    font-size: 24px; /* Rozmiar tekstu */
+    color: black; /* Kolor tekstu na czarny */
+}

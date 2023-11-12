@@ -1,0 +1,16 @@
+body {
+	/* Tło strony o kolorze szarym (#696969) */
+	background-color: #696969;
+}
+
+#advertisement {
+	/* Styl dla elementu o identyfikatorze "advertisement" */
+	width: 400px; /* Szerokość 400 pikseli */
+	height: 200px; /* Wysokość 200 pikseli */
+	background-color: pink; /* Tło różowe */
+	text-align: center; /* Tekst wyśrodkowany */
+	min-height: 10em; /* Minimalna wysokość 10 em (font-size strony) */
+	display: table-cell; /* Wyświetlanie jako komórka tabeli */
+	vertical-align: middle; /* Wyśrodkowanie w pionie */
+	border-style: solid; /* Styl obramowania - solid (ciągła linia) */
+}

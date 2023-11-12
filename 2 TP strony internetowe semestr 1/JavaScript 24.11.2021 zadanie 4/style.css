@@ -1,0 +1,26 @@
+/* Ustalenie koloru tła całej strony na szary */
+body {
+	background-color: #696969;
+}
+
+/* Wyśrodkowanie tekstu w nagłówku h1 */
+h1 {
+	text-align: center;
+}
+
+/* Wyśrodkowanie tekstu w elementach div */
+div {
+	text-align: center;
+}
+
+/* Stylowanie elementu o identyfikatorze "text" */
+#text {
+	/* Ustalenie szerokości na 70% szerokości rodzica */
+	width: 70%;
+	/* Dodanie odstępu od lewej krawędzi na 15% szerokości rodzica, aby wyśrodkować treść */
+	margin-left: 15%;
+	/* Wyśrodkowanie tekstu wewnątrz elementu */
+	text-align: center;
+	/* Ustalenie stylu obramowania na "solid" (stały) */
+	border-style: solid;
+}

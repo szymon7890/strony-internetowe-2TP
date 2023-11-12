@@ -1,0 +1,168 @@
+Skep Rower
+
+
+
+-- Tworzenie tabeli o nazwie "groceries"
+CREATE TABLE groceries (
+    -- Definicja kolumny "id" jako klucz główny (PRIMARY KEY) i typu INTEGER
+    id INTEGER PRIMARY KEY,
+    -- Definicja kolumny "name" typu TEXT (tekstowa)
+    name TEXT,
+    -- Definicja kolumny "quantity" typu INTEGER (liczba całkowita)
+    quantity INTEGER,
+);
+
+
+
+-- Wstawianie danych do tabeli "groceries"
+-- Zakładając, że "1" to wartość kolumny "id", "rower" to wartość kolumny "name", a "2" to wartość kolumny "quantity"
+
+INSERT INTO groceries (id, name, quantity) 
+VALUES (1, 'rower', 2);
+
+
+
+
+-- Wybieranie wszystkich danych z tabeli "groceries"
+SELECT * FROM groceries;
+
+
+
+
+-- Tworzenie tabeli "ksiazki"
+CREATE TABLE ksiazki (
+    -- Definicja kolumny "id" jako klucz główny (PRIMARY KEY) i typu INTEGER
+    id INTEGER PRIMARY KEY,
+    -- Definicja kolumny "name" typu TEXT (tekstowa)
+    name TEXT,
+    -- Definicja kolumny "rating" typu INTEGER (liczba całkowita)
+    rating INTEGER
+);
+
+
+
+
+-- Wstawianie danych do tabeli "ksiazki"
+-- Wstawienie rekordu z wartościami (1, "kali linux", 1)
+INSERT INTO ksiazki (id, name, rating) 
+VALUES (1, 'kali linux', 1);
+
+-- Wstawienie rekordu z wartościami (2, "SQL", 1)
+INSERT INTO ksiazki (id, name, rating) 
+VALUES (2, 'SQL', 1);
+
+-- Wstawienie rekordu z wartościami (3, "Programing code", 2)
+INSERT INTO ksiazki (id, name, rating) 
+VALUES (3, 'Programming code', 2);
+
+
+
+
+
+-- Wybieranie wszystkich danych z tabeli "ksiazki"
+SELECT * FROM ksiazki;
+
+
+
+
+
+ORDER BY - sortowanie
+
+
+
+
+
+-- Wybieranie wszystkich danych z tabeli "groceries" i sortowanie wyników według nazwy kolumny
+-- Wstaw nazwę kolumny, według której chcesz posortować wyniki, w miejscu "nazwa_kolumny"
+SELECT * FROM groceries ORDER BY nazwa_kolumny;
+
+
+
+
+-- Wybieranie wszystkich danych z tabeli "groceries" i sortowanie wyników według kolumny "aisle"
+SELECT * FROM groceries ORDER BY aisle;
+
+
+
+
+
+WHERE - klałzula filtracja
+
+
+
+
+
+-- Wybieranie danych z tabeli "tabela", gdzie kolumna "kolumna" jest większa niż 5
+SELECT * FROM tabela WHERE kolumna > 5;
+
+
+
+
+-- Wybieranie wszystkich danych z tabeli "groceries", gdzie kolumna "aisle" jest większa niż 5
+-- Następnie wyniki są sortowane według kolumny "aisle"
+SELECT * FROM groceries WHERE aisle > 5 ORDER BY aisle;
+
+
+
+
+
+SUM - suma
+
+
+
+
+
+
+-- Wybieranie kolumny "aisle" i sumy kolumny "quantity" z tabeli "groceries"
+-- Wyniki są grupowane według kolumny "aisle"
+SELECT aisle, SUM(quantity) FROM groceries GROUP BY aisle;
+
+
+
+
+
+przed sum wpisz jaka ma być kolumna pokazana gdzie coś się znajduje w ilościach.
+
+
+Zadanie domowe.
+-- Tworzenie tabeli "Rowery"
+CREATE TABLE Rowery (
+    -- Definicja kolumny "id" jako klucz główny (PRIMARY KEY) i typu INTEGER
+    id INTEGER PRIMARY KEY,
+    -- Definicja kolumny "marka" typu TEXT (tekstowa)
+    marka TEXT,
+    -- Definicja kolumny "model" typu TEXT (tekstowa)
+    model TEXT,
+    -- Definicja kolumny "typ" typu TEXT (tekstowa)
+    typ TEXT,
+    -- Definicja kolumny "waga" typu TEXT (tekstowa)
+    waga TEXT,
+    -- Definicja kolumny "sztuki" typu INTEGER (liczba całkowita)
+    sztuki INTEGER,
+    -- Definicja kolumny "cena" typu TEXT (tekstowa)
+    cena TEXT
+);
+
+-- Wstawianie danych do tabeli "Rowery"
+-- Wstawienie pięciu rekordów z wartościami
+INSERT INTO Rowery (id, marka, model, typ, waga, sztuki, cena)
+VALUES (1, 'Kross', 'Level b4 29', 'Górski', '15 KG', 5, '2500');
+
+INSERT INTO Rowery (id, marka, model, typ, waga, sztuki, cena)
+VALUES (2, 'Focus', 'Black Forest Pro HT', 'Górski', '15 KG', 5, '3000');
+
+INSERT INTO Rowery (id, marka, model, typ, waga, sztuki, cena)
+VALUES (3, 'Haibike', 'Q Race SL', 'Kolarzowy', '10 KG', 10, '2000');
+
+INSERT INTO Rowery (id, marka, model, typ, waga, sztuki, cena)
+VALUES (4, 'B-twin', 'Triban 3', 'Kolarzowy', '10 KG', 15, '1500');
+
+INSERT INTO Rowery (id, marka, model, typ, waga, sztuki, cena)
+VALUES (5, 'No_NAME', 'BMX', 'BMX', '10 KG', 2, '1000');
+
+
+
+
+
+-- Wybieranie wszystkich danych z tabeli "Rowery"
+SELECT * FROM Rowery;
