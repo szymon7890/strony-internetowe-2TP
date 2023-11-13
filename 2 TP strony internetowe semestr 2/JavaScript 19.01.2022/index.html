@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Poruszający się kwadrat</title>
+        <!-- Arkusz stylów definiujący kolor zielony dla klasy 'green' -->
+        <style>
+            .green {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            // Po załadowaniu całej struktury HTML
+            document.addEventListener("DOMContentLoaded", function () {
+                // Utwórz nową tabelę
+                var table = document.createElement("table");
+                table.id = "table";
+        
+                // Ustaw szerokość i wysokość komórek w tabeli
+                var cellWidth = 100;
+                var cellHeight = 100;
+        
+                // Początkowe położenie kwadratu
+                var x = 3;
+                var y = 3;
+        
+                // Dodaj wiersze i komórki do tabeli
+                for (var i = 0; i < 7; i++) {
+                    var row = document.createElement("tr");
+        
+                    for (var j = 0; j < 7; j++) {
+                        var cell = document.createElement("td");
+                        cell.id = "x" + j + "-y" + i;
+        
+                        // Dodaj klasę 'green' dla komórki w początkowym położeniu
+                        if (i === y && j === x) {
+                            cell.classList.add("green");
+                        }
+        
+                        // Ustaw szerokość, wysokość i styl obramowania dla komórki
+                        cell.style.width = cellWidth + "px";
+                        cell.style.height = cellHeight + "px";
+                        cell.style.border = "1px solid gray";
+        
+                        // Dodaj komórkę do aktualnego wiersza
+                        row.appendChild(cell);
+                    }
+        
+                    // Dodaj wiersz do tabeli
+                    table.appendChild(row);
+                }
+        
+                // Dodaj tabelę do elementu body w dokumencie HTML
+                document.body.appendChild(table);
+        
+                // Ustaw zdarzenie obsługujące wciśnięcie klawisza
+                document.onkeydown = function (event) {
+                    // Pobierz element z klasą 'green'
+                    var element = document.querySelector('.green');
+        
+                    if (element) {
+                        // Zaktualizuj pozycję kwadratu na podstawie klawisza strzałki
+                        element.classList.remove("green");
+        
+                        if (event.key === "ArrowLeft" && x > 0) {
+                            x--;
+                        } else if (event.key === "ArrowUp" && y > 0) {
+                            y--;
+                        } else if (event.key === "ArrowRight" && x < 6) {
+                            x++;
+                        } else if (event.key === "ArrowDown" && y < 6) {
+                            y++;
+                        }
+        
+                        // Utwórz nowy identyfikator dla nowej pozycji
+                        var newId = "x" + x + "-y" + y;
+                        // Pobierz element o nowym identyfikatorze
+                        var newElement = document.getElementById(newId);
+        
+                        if (newElement) {
+                            // Dodaj klasę 'green' do nowego elementu
+                            newElement.classList.add('green');
+                        }
+                    }
+                };
+            });
+        </script>
+    </body>
+</html>

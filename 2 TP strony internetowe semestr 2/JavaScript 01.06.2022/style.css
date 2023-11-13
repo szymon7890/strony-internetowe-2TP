@@ -1,0 +1,24 @@
+#squares {
+    padding: 10px; /* Dodaje wewnętrzny odstęp 10 pikseli do elementu o identyfikatorze "squares" */
+}
+
+#square1 {
+    width: 200px; /* Ustawia szerokość na 200 pikseli */
+    height: 200px; /* Ustawia wysokość na 200 pikseli */
+    background-color: red; /* Ustawia kolor tła na czerwony */
+    float: left; /* Ustawia styl zmiennoprzecinkowy na lewo, co powoduje, że element będzie umieszczony obok poprzedniego */
+}
+
+#square2 {
+    width: 200px; /* Ustawia szerokość na 200 pikseli */
+    height: 200px; /* Ustawia wysokość na 200 pikseli */
+    background-color: green; /* Ustawia kolor tła na zielony */
+    float: left; /* Ustawia styl zmiennoprzecinkowy na lewo, co powoduje, że element będzie umieszczony obok poprzedniego */
+}
+
+#square3 {
+    width: 200px; /* Ustawia szerokość na 200 pikseli */
+    height: 200px; /* Ustawia wysokość na 200 pikseli */
+    background-color: blue; /* Ustawia kolor tła na niebieski */
+    float: left; /* Ustawia styl zmiennoprzecinkowy na lewo, co powoduje, że element będzie umieszczony obok poprzedniego */
+}

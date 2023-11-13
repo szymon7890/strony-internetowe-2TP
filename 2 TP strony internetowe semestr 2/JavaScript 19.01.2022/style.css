@@ -1,0 +1,11 @@
+/* Styl dla komórek tabeli */
+td {
+    width: 100px; /* Szerokość komórki */
+    height: 100px; /* Wysokość komórki */
+    border: 1px solid gray; /* Ramka komórki */
+}
+
+/* Styl dla komórki o specjalnej klasie 'green' */
+.green {
+    background-color: green; /* Tło komórki w kolorze zielonym */
+}

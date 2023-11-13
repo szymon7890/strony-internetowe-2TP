@@ -1,0 +1,94 @@
+/* Resetowanie domyślnego marginesu dla body */
+body {
+    margin: 0px;
+}
+
+/* Ustawienia dla kontenera strony z wykorzystaniem CSS Grid */
+#container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "footer footer footer"
+    ;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 7fr 1fr;
+    height: 100vh;
+}
+
+/* Styl dla nagłówka strony */
+#container header {
+    background-color: #0099FF;
+    grid-area: header;
+}
+
+/* Styl dla tytułu witającego w nagłówku */
+#titleWelcome {
+    text-align: center;
+    color: white;
+}
+
+/* Styl dla pogrubionego tekstu w tytule witającym */
+#titleWelcome p {
+    font-weight: bold;
+}
+
+/* Styl dla nawigacji */
+#container nav {
+    background-color: #00EEFF;
+    grid-area: nav;
+}
+
+/* Styl dla artykułu witającego */
+#articleWelcome {
+    float: left;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-weight: bold;
+}
+
+/* Styl dla stopki strony */
+#container footer {
+    background-color: #0099FF;
+    grid-area: footer;
+}
+
+/* Styl dla tekstu w stopce */
+#footerText {
+    font-size: 24px;
+    color: white;
+}
+
+/* Styl dla elementów listy w stopce */
+li {
+    color: white;
+}
+
+/* Styl dla obrazka w stopce */
+#obrazekLowienia {
+    width: 40%;
+    height: auto;
+    margin-left: 20%;
+    margin-top: -13%;
+}
+
+/* Styl dla informacji o autorze w stopce */
+#autorStrony {
+    color: white;
+    margin-top: -12%;
+    font-size: 18px;
+    margin-right: 7%;
+    float: right;
+}
+
+/* Styl dla linku w stopce */
+#linkFooter {
+    color: black;
+    background-color: yellow;
+    margin-right: 10%;    
+    border: 1px dashed;
+    font-size: 30px;
+    float: right;
+    width: 19%;
+    height: 10%;
+}

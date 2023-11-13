@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Ustawienie kodowania znaków na UTF-8 -->
+        <meta charset="UTF-8">
+        <!-- Tytuł strony -->
+        <title>Komis samochodowy</title>
+    </head>
+    <body>
+
+        <!-- Formularz wysyłający dane do pliku "index.php" za pomocą metody POST -->
+        <form method="POST" action="index.php">
+            <!-- Pole dla wprowadzenia marki samochodu -->
+            <label>marka:</label> <input type="text" name="marka"> <br>
+
+            <!-- Pole dla wprowadzenia modelu samochodu -->
+            <label>model:</label> <input type="text" name="model"> <br>
+
+            <!-- Pole dla wprowadzenia roku produkcji samochodu -->
+            <label>rok produkcji:</label> <input type="year" name="rok"> <br>
+
+            <!-- Pole dla wprowadzenia koloru samochodu -->
+            <label>kolor:</label> <input type="text" name="kolor"> <br>
+
+            <!-- Przycisk submit do wysłania formularza -->
+            <input type="submit">
+        </form>
+    </body>
+</html>

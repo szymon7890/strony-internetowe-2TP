@@ -1,0 +1,17 @@
+#middle_flow {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+/* Styl dla elementu o identyfikatorze "middle_flow" */
+
+/*
+    Display: flex;
+    - Ustawia kontener jako flex container, co pozwala na ustawienie jego dzieci w modelu flexbox.
+    
+    Flex-direction: column;
+    - Układanie dzieci w kolumnie, czyli jeden pod drugim. W tym przypadku, dzieci elementu #middle_flow będą ułożone w kolumnie zamiast w rzędzie.
+
+    Border: 1px solid black;
+    - Dodaje czarną obwódkę o szerokości 1 piksela wokół elementu #middle_flow.
+*/

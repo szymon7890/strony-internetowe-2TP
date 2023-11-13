@@ -1,0 +1,102 @@
+/* Resetowanie marginesu dla elementu body */
+body {
+    margin: 0px;
+}
+
+/* Ustawienia dla głównego kontenera z wykorzystaniem grid layout */
+#container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav article aside"
+        "footer footer footer"
+    ;
+    grid-template-rows: 2fr 5fr 1fr;
+    grid-template-columns: 1fr 7fr 1fr;
+    height: 100vh;
+}
+
+/* Styl dla sekcji nagłówkowej */
+#container header {
+    background-color: #ff7f27;
+    grid-area: header;
+}
+
+/* Styl dla logo w nagłówku */
+#logo {
+    margin-left: 10%;
+    padding-top: 3%;
+    font-size: 64px;
+}
+
+/* Styl dla linków w nagłówku */
+#link {
+    color: black;
+    text-decoration: none;
+    margin-top: -5%;
+    margin-left: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+/* Styl dla sekcji artykułowej */
+#container article {
+    background-color: white;
+    grid-area: article;
+}
+
+/* Styl dla tabel, nagłówków i komórek tabeli */
+table, th, td {
+    border: 5px solid;
+    width: 20%;
+    height: 30%;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+
+/* Styl dla pierwszego nagłówka w pierwszej tabeli */
+#table1FirstTitle {
+    float: right;
+}
+
+/* Styl dla drugiego nagłówka w pierwszej tabeli */
+#table1SecondaryTitle {
+    float: left;
+}
+
+/* Styl dla drugiej tabeli */
+#table2 {
+    border: 0px solid;
+    width: 20%;
+    height: 30%;
+    margin-bottom: 2px;
+    margin-left: 25%;
+    justify-content: center;
+}
+
+/* Styl dla trzeciej tabeli */
+#table3 {
+    border: 0px solid;
+    width: 20%;
+    height: 20%;
+    margin-left: 50%;
+}
+
+/* Styl dla sekcji nawigacyjnej */
+#container nav {
+    background-color: white;
+    grid-area: nav;
+}
+
+/* Styl dla sekcji bocznej (aside) */
+#container aside {
+    background-color: white;
+    grid-area: aside;
+}
+
+/* Styl dla stopki */
+#container footer {
+    background-color: #ff7f27;
+    grid-area: footer;
+}

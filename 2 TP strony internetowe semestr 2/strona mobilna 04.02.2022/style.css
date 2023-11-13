@@ -1,0 +1,54 @@
+/* Resetuje margines ciała strony na 0 i dodaje czarną obwódkę o szerokości 3 pikseli */
+body {
+    margin: 0px;
+    border: 3px solid black;
+}
+
+/* Styl dla elementu o identyfikatorze "container" z czarną obwódką o szerokości 1 piksela */
+#container {
+    border: 1px solid black;
+}
+
+/* Styl dla elementu o identyfikatorze "middle_flow" - ustawia go jako kontener flexboxa z orientacją w rzędzie (poziomo) i ukrywa ewentualne przepełnienie */
+#middle_flow {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+/* Styl dla dzieci elementu o identyfikatorze "container" (z wyjątkiem #middle_flow) - ustawia minimalną wysokość na 100 pikseli, centruje zawartość, ustawia tekst na środku i ustawia orientację flexboxa w rzędzie */
+#container > *:not(#middle_flow) {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+/* Styl dla elementu nagłówka (header) - ustawia kolor tła na zielony */
+header {
+    background-color: green;
+}
+
+/* Styl dla elementu nawigacji (nav) - ustawia elastyczność na 1, co oznacza, że będzie zajmować dostępne miejsce, a kolor tła to niebieski */
+nav {
+    flex: 1;
+    background-color: blue;
+}
+
+/* Styl dla elementu artykułu (article) - ustawia elastyczność na 8, co oznacza, że będzie zajmować 8 razy więcej miejsca niż nawigacja, a kolor tła to żółty */
+article {
+    flex: 8;
+    background-color: yellow;
+}
+
+/* Styl dla sekcji bocznej (aside) - ustawia elastyczność na 1, co oznacza, że będzie zajmować dostępne miejsce, a kolor tła to różowy */
+aside {
+    flex: 1;
+    background-color: pink;
+}
+
+/* Styl dla stopki (footer) - ustawia kolor tła na niebieski */
+footer {
+    background-color: blue;
+}

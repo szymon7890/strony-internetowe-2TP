@@ -1,0 +1,184 @@
+/* Ogólny kontener strony */
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* Styl nagłówka pierwszego poziomu */
+h1 {
+	font-size: 36px;
+}
+
+/* Styl nawigacji */
+nav {
+	background-color: #2B2B2B;
+}
+
+/* Styl kontenerów dla nawigacji i stopki */
+nav .container, footer .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+}
+
+/* Styl nawigacji - dodatkowe ustawienia */
+nav .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+}
+
+/* Styl odnośników w nawigacji */
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+/* Styl logo w nawigacji */
+.nav-logo {
+	font-weight: 600;
+}
+
+/* Styl odnośników nawigacyjnych z efektem hover */
+.nav-links a {
+	transition: .5s all;
+}
+
+/* Efekt powiększenia przy najechaniu na odnośnik */
+.nav-links a:hover {
+	transform: scale(1.1);
+}
+
+/* Dodatkowe odstępy między odnośnikami w nawigacji */
+.nav-links a {
+	margin-right: 30px;
+}
+
+/* Mniejszy odstęp dla ostatniego odnośnika w nawigacji */
+.nav-links a:last-of-type {
+	margin-right: 10px;
+}
+
+/* Styl sekcji "landing-page" */
+.landing-page {
+	width: 100vw;
+	height: calc(100vh - 70px);
+	background-image: url('Zrzut ekranu 2021-03-23 140205.PNG');
+	background-position: center;
+	background-size: cover;
+}
+
+/* Styl cienia na sekcji "landing-page" */
+.landing-page-shadow {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Styl kontenera w sekcji "landing-page-shadow" */
+.landing-page-shadow .container {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+/* Styl tekstu w sekcji "landing-page" */
+.landing-page-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	height: 25%;
+	color: black;
+}
+
+/* Styl nagłówka drugiego poziomu w sekcji "landing-page-text" */
+.landing-page-text h2 {
+	font-size: 24px;
+}
+
+/* Styl przycisku w sekcji "landing-page-text" */
+.landing-page-text button {
+	background: none;
+	padding: 5px 10px;
+	border: 3px solid white;
+	border-radius: 14px;
+	color: black;
+	font-size: 16px;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+/* Efekt zmiany koloru przycisku przy najechaniu */
+.landing-page-text button:hover {
+	background-color: white;
+	color: black;
+}
+
+/* Styl sekcji "offer" */
+.offer {
+	padding: 5% 0;
+	background-color: black;
+	color: white;
+}
+
+/* Styl nagłówka pierwszego poziomu w sekcji "offer" */
+.offer h1 {
+	margin-bottom: 50px;
+}
+
+/* Styl nagłówka drugiego poziomu w sekcji "offer" */
+.offer h2 {
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+/* Styl nagłówka trzeciego poziomu w sekcji "offer" */
+.offer h3 {
+	font-size: 12px;
+}
+
+/* Styl listy ofert w sekcji "offer" */
+.offer-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* Styl pojedynczej oferty w sekcji "offer" */
+.offer-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 30%;
+	height: 150px;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	background-color: #7b668d;
+}
+
+/* Zmiana marginesu dla co trzeciej oferty w sekcji "offer" */
+.offer-box:nth-of-type(3n) {
+	margin-right: 0;
+}
+
+/* Styl stopki */
+footer {
+	background-color: white;
+	text-align: center;
+}
+
+/* Styl odnośników w stopce */
+footer a {
+	color: black;
+	text-decoration: none;
+}
+
+/* Styl sekcji kontaktowej w stopce */
+.footer-contact {
+	display: flex;
+	flex-direction: column;
+}

@@ -1,0 +1,104 @@
+/* Resetowanie marginesu dla body */
+body {
+    margin: 0px;
+}
+
+/* Ustawienia kontenera typu grid */
+#container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "article nav aside"
+        "footer footer footer";
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 7fr 1fr;
+    height: 100vh;
+}
+
+/* Styl nagłówka */
+#container header {
+    background-color: blue;
+    grid-area: header;
+}
+
+/* Styl tytułu z uwzględnieniem centrowania */
+#title {
+    width: 75%;
+    height: 50%;
+    text-align: center;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+/* Styl sekcji artykułowej */
+#container article {
+    background-color: aqua;
+    grid-area: article;
+}
+
+/* Styl sekcji reklamowej */
+#advertising {
+    width: 90%;
+    height: 90%;
+    border: 3px  solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styl nawigacji */
+#container nav {
+    background-color: red;
+    grid-area: nav;
+}
+
+/* Styl głównej sekcji kontenera */
+#containerMain {
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styl sekcji pobocznej (aside) */
+#container aside {
+    background-color: orange;
+    grid-area: aside;
+}
+
+/* Styl list w sekcji pobocznej */
+#lists {
+    width: 90%;
+    height: 90%;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styl wiersza listy */
+.listsRow {
+    height: 8%;
+    padding: 5%;
+    margin: 25%;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styl stopki */
+#container footer {
+   background-color: yellow;
+   grid-area: footer;
+}
+
+/* Styl stopki z uwzględnieniem centrowania */
+#footer {
+    width: 75%;
+    height: 50%;
+    text-align: center;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto; 
+}

@@ -1,0 +1,84 @@
+/* Ustawienia dla całej strony */
+body {
+    background-color: antiquewhite; /* Kolor tła dla całej strony */
+    margin: 0px; /* Zerowanie marginesu strony */
+}
+
+/* Ustawienia dla kontenera */
+#container {
+    display: grid; /* Ustawienie kontenera jako siatki */
+    grid-template-areas: 
+        "header header header" /* Układ obszaru nagłówka */
+        "nav nav nav" /* Układ obszaru nawigacji */
+        "footer footer footer" /* Układ obszaru stopki */
+    ;
+    grid-template-rows: auto 1fr auto; /* Wysokości w stosunku do treści, z elastyczną przestrzenią dla artykułu */
+    grid-template-columns: 1fr 8fr 1fr; /* Szerokości kolumn */
+    min-height: 100vh; /* Minimalna wysokość na całą wysokość widoku */
+}
+
+/* Styl nagłówka */
+#container header {
+    background-color: green; /* Kolor tła nagłówka */
+    grid-area: header; /* Przypisanie obszaru siatki dla nagłówka */
+}
+
+/* Styl nagłówka - tekst powitalny */
+#welcomm {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    color: white; /* Kolor tekstu */
+}
+
+/* Styl sekcji artykułu */
+#container article {
+    background-color: aqua; /* Kolor tła artykułu */
+    grid-area: article; /* Przypisanie obszaru siatki dla artykułu */
+}
+
+/* Styl nawigacji */
+#container nav {
+    background-color: #F7EAD7; /* Kolor tła nawigacji */
+    grid-area: nav; /* Przypisanie obszaru siatki dla nawigacji */
+}
+
+/* Styl obrazu ryby */
+#imagesFish {
+    width: 45%; /* Szerokość obrazu ryby */
+    height: 80%; /* Wysokość obrazu ryby */
+    border: 2px dashed green; /* Ramka z przerywaną kreską i zielonym kolorem */
+    margin-top: 2%; /* Margines górny */
+    margin-left: 2%; /* Margines lewy */
+}
+
+/* Styl opisu */
+#description {
+    float: right; /* Przesunięcie w prawo */
+    justify-content: center; /* Wyśrodkowanie zawartości w pionie */
+    margin-right: 35%; /* Margines prawy */
+    margin-top: 3%; /* Margines górny */
+}
+
+/* Styl drugiego opisu */
+#descriptionTwo {
+    display: inline-block; /* Ustawienie jako blok w linii */
+    flex-direction: column; /* Układ elementów w kolumnie */
+    align-items: flex-start; /* Wyrównanie elementów do lewej */
+}
+
+/* Styl sekcji bocznej */
+#container aside {
+    background-color: pink; /* Kolor tła sekcji bocznej */
+    grid-area: aside; /* Przypisanie obszaru siatki dla sekcji bocznej */
+}
+
+/* Styl stopki */
+#container footer {
+    background-color: green; /* Kolor tła stopki */
+    grid-area: footer; /* Przypisanie obszaru siatki dla stopki */
+}
+
+/* Styl stopki - autor */
+#footerAuthor {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    color: white; /* Kolor tekstu */
+}
