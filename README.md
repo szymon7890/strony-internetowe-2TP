@@ -35,7 +35,6 @@ To repozytorium zawiera projekty związane z moją klasą szkolną 2 TP. które 
 25. [wędkarstwo](https://github.com/szymon7890/strony-internetowe-2TP/tree/main/2%20TP%20strony%20internetowe%20semestr%202/w%C4%99dkarstwo): Strona internetowa Wędkarstwo przy użyciu PHP.
 26. [PHP 29.05.2022](https://github.com/szymon7890/strony-internetowe-2TP/tree/main/2%20TP%20strony%20internetowe%20semestr%202/PHP%2029.05.2022): PHP CRUD.
 27. [JavaScript 01.06.2022](https://github.com/szymon7890/strony-internetowe-2TP/tree/main/2%20TP%20strony%20internetowe%20semestr%202/JavaScript%2001.06.2022): JavaScript wyświetlanie elementów i identyfikatorów w console.log().
-28. [JavaScript 4.10.2022](https://github.com/szymon7890/strony-internetowe-2TP/tree/main/2%20TP%20strony%20internetowe%20semestr%202/JavaScript%204.10.2022): Wyświetlanie dni od podanej daty do podanej daty ile dni minie.
 
 ## Wymagania techniczne:
 
